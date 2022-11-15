@@ -3,6 +3,8 @@
 sudo apt-get -y install tldr
 sudo apt-get -y install clang-format
 sudo apt-get -y install cppcheck 
+sudo apt-get -y install ctags
+sudo apt-get -y install ripgrep
 dir="${HOME}/.vim/"
 echo $dir
 if [ ! -d "$dir" ];then
@@ -35,7 +37,8 @@ clang-format -style=Google -dump-config > .clang-format
 echo "文件拷贝完成! 请进入vim中进行PlugInstall"
 echo "YCM安装流程：
       1. cd ~/.vim/plugged/YouCompleteMe
-      2. git submodule -init -recursive
+      2. git submodule update --init --recursive
       3. 若某个模块无法安装，则手动clone，如git clone https://github.com.cnpmjs.org/psf/requests.git third_party/requests_deps/requests
       4. python3 install.py --clangd-completer"
 echo "c++相应namespace等配色在.vim/plugged/cpp-enhanced-highlighti中"
+echo "airline字体使用DroidSansMono nerd font bold"
